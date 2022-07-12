@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "Nombre": "Niko Belic",
+        "Edad": "30",
+        "Nacionalidad": "Serbia",
+        "Rol": "Protagonico",
+        "Afiliacion": "Independiente (Trabajaba para los pegorino anteriormente)"
+    },
+    {
+        "id": "2",
+        "Nombre": "Roman Belic",
+        "Edad": "31",
+        "Nacionalidad": "Serbia",
+        "Rol": "Protagonico",
+        "Afiliacion": "Su empresa de taxis" 
+    },
+    {
+        "id": "3",
+        "Nombre": "Vladimir Glebov",
+        "Edad": "41",
+        "Nacionalidad": "Ruso-Estadounidense",
+        "Rol": "Antagonico",
+        "Afiliacion": "Organizacion Criminal Faustin"
+    },
+    {
+        "id": "4",
+       "Nombre": "Mallorie Bardas",
+       "Edad": "29",
+       "Nacionalidad": "Puertorriqueña",
+       "Rol": "Secundario",
+       "Afiliacion": "Ninguna(Anteriormente con una empresa de taxis)"
+    }
+]
