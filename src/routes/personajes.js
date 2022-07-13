@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
    const {Nombre, Edad, Nacionalidad, Rol, Afiliacion}= req.body;
    if(Nombre && Edad && Nacionalidad && Rol && Afiliacion) {
        const id = personajes.length + 1;
-       const nuevoPersonaje = {...req.body};
+       const nuevoPersonaje = {...req.body, id};
        console.log(nuevoPersonaje);
        res.json("Correcto!");
        personajes.push(nuevoPersonaje);
@@ -24,33 +24,32 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-   const { id } = req.params;
-   const { Nombre, Edad, Nacionalidad, Rol, Afiliacion } = req.body;
+   const {id} = req.params;
+   const {Nombre, Edad, Nacionalidad, Rol, Afiliacion} = req.body;
    if(Nombre && Edad && Nacionalidad && Rol && Afiliacion) {
       _.each(personajes, (personaje, i) => {
-         if(personaje.id == id) {
+         if(personaje.id == id){
             personaje.Nombre = Nombre;
             personaje.Edad = Edad;
-            personaje.Nacionalidad = Nacionalidad;
+            personaje.Nacionalidad;
             personaje.Rol = Rol;
-            personaje.Afiliacion = Afiliacion; 
+            personaje.Afiliacion = Afiliacion;
          }
       });
       res.json(personajes);
    } else {
-      res.status(500).json({error: 'Hubo un error'});
-   }
+      res.status(500).json({error: 'Hay error'});
+   } 
 });
 
 router.delete('/:id', (req, res) => {
-    const { id } = req.params;
+   const {id} = req.params;
      _.each(personajes, (personaje, i) => {
-        if(personaje.id == id){
+        if(personaje.id == id) {
            personajes.splice(i, 1);
         }
      });
      res.send(personajes);
-
 });
 
 module.exports = router;
